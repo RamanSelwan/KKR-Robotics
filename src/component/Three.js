@@ -41,13 +41,13 @@ function ThreeScene() {
     let isMounted = true;
 
     loader.load(
-      "/bumpy.glb", // Ensure this file is in the `public` folder
+      "/robot_rocket.glb", // Ensure this file is in the `public` folder
       (gltf) => {
         if (!isMounted) return;
         loadedModelRef.current = gltf.scene;
 
         // Scale the model to appropriate size
-        loadedModelRef.current.scale.set(1.5, 1.5, 1.5); // Adjust these values as needed
+        loadedModelRef.current.scale.set(1, 1, 1); // Adjust these values as needed
 
         // Center the model
         const box = new THREE.Box3().setFromObject(loadedModelRef.current);
